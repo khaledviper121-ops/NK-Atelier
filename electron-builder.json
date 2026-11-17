@@ -1,0 +1,38 @@
+{
+  "appId": "com.nkatelier.system",
+  "productName": "NK System Atelier",
+  "directories": {
+    "output": "release"
+  },
+  "files": [
+    "dist/**/*",
+    "electron/**/*",
+    "build/icon.ico",
+    "build/icon.png",
+    "package.json"
+  ],
+  "win": {
+    "icon": "build/icon.ico",
+    "target": [
+      {
+        "target": "nsis",
+        "arch": ["x64"]
+      },
+      {
+        "target": "portable",
+        "arch": ["x64"]
+      }
+    ]
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true,
+    "shortcutName": "NK System Atelier",
+    "uninstallDisplayName": "NK System - إدارة الأتيليه"
+  },
+  "portable": {
+    "artifactName": "NK-System-Atelier-Portable-${version}.exe"
+  }
+}
